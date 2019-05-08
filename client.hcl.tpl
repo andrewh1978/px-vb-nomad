@@ -1,6 +1,6 @@
 datacenter = "dc1"
 data_dir   = "/etc/nomad.d"
-bind_addr  = "IP"
+bind_addr  = "192.168.99.10NODE"
 
 client {
   enabled = true

@@ -87,7 +87,7 @@ Vagrant.configure("2") do |config|
           curl -sSL https://releases.hashicorp.com/nomad/#{nomad_version}/nomad_#{nomad_version}_linux_amd64.zip | gunzip >/usr/bin/nomad
           chmod 755 /usr/bin/nomad
           nomad -autocomplete-install
-          sed s/IP/192.168.99.10#{i}/ /vagrant/client.hcl.tpl >/etc/nomad.d/client.hcl
+          sed s/NODE/#{i}/ /vagrant/client.hcl.tpl >/etc/nomad.d/client.hcl
           cp /vagrant/nomad.service.client /etc/systemd/system/nomad.service
           systemctl enable nomad docker
           systemctl start nomad docker
